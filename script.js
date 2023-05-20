@@ -4,7 +4,7 @@ for (let i = 0; i < 16; i++) {
   row.style.display = 'flex';
   for (let j = 0; j < 16; j++) {
     const div = document.createElement('div');
-    let size = 960 / 16;
+    let size = 400 / 16;
     div.style.width = size + 'px';
     div.style.height = size + 'px';
     row.appendChild(div);
