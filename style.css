@@ -1,0 +1,14 @@
+body {
+  background-color: azure;
+}
+
+#container {
+  background-color: white;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 960px;
+  height: 960px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
