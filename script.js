@@ -1,5 +1,6 @@
 function clear() {
-const boxes = document.querySelectorAll('#container > div');
+const container = document.querySelector('#container');
+const boxes = container.querySelectorAll('div');
 boxes.forEach((box) => {
   box.style.backgroundColor = 'white';
 });
