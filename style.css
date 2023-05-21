@@ -1,9 +1,11 @@
 body {
-  background-color: azure;
+  background-color: #9fd3c7;
 }
 
 h1, p {
   text-align: center;
+  color: #142d4c;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 #container {
@@ -20,5 +22,24 @@ h1, p {
 #settings {
   display: flex;
   flex-direction: column;
+  gap: 10px;
   width: 100px;
+  position: absolute;
+  top: 50%;
+  left: 10%;
+  background-color: transparent;
+}
+
+button {
+  height: 30px;
+  color: #9fd3c7;
+  background-color: #142d4c;
+}
+  
+p {
+  margin: 0;
+}
+
+input[type="range"] {
+  background-color: #142d4c;
 }

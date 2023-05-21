@@ -1,5 +1,5 @@
 function clear() {
-const boxes = document.querySelectorAll('div');
+const boxes = document.querySelectorAll('#container > div');
 boxes.forEach((box) => {
   box.style.backgroundColor = 'white';
 });
@@ -16,10 +16,6 @@ function getRandomColor() {
   
 let rainbow = false;
 let mouseoverListener;
-let mouseDownListener;
-let mouseUpListener;
-let clickListener;
-  
 function createGrid(num) {
 const container = document.querySelector('#container');
 container.innerHTML = '';
@@ -45,29 +41,8 @@ mouseoverListener = (e) => {
     e.target.style.backgroundColor = getRandomColor();
   }
 };
-mouseDownListener = () => {
-  boxes.forEach((box) => {
-  box.addEventListener('mouseover', mouseoverListener);
-  });
-};
-mouseUpListener = () => {
-  boxes.forEach((box) => {
-  box.removeEventListener('mouseover', mouseoverListener);
-  });
-};
-clickListener = (e) => {
-  e.stopPropagation();
-  if (rainbow === false) {
-    e.target.style.backgroundColor = 'black';
-  } 
-  else {
-    e.target.style.backgroundColor = getRandomColor();
-  }
-};
 boxes.forEach((box) => {
-  box.addEventListener('mousedown', mouseDownListener);
-  box.addEventListener('mouseup', mouseUpListener);
-  box.addEventListener('click', clickListener);
+  box.addEventListener('mouseover', mouseoverListener);
 });
 }
 
@@ -82,9 +57,6 @@ slider.addEventListener('input', () => {
   const boxes = document.querySelectorAll('#container > div');
   boxes.forEach((box) => {
     box.removeEventListener('mouseover', mouseoverListener);
-    box.removeEventListener('mousedown', mouseDownListener);
-    box.removeEventListener('mouseup', mouseUpListener);
-    box.removeEventListener('click', clickListener);
   });
   createGrid(value);
 });
