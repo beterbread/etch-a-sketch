@@ -25,9 +25,9 @@ for (let i = 0; i < num; i++) {
   row.style.display = 'flex';
   for (let j = 0; j < num; j++) {
     const div = document.createElement('div');
-    let size = 300 / num;
-    div.style.width = size + 'px';
-    div.style.height = size + 'px';
+    let size = 30 / num;
+    div.style.width = size + 'vw';
+    div.style.height = size + 'vw';
     row.appendChild(div);
   }
   container.appendChild(row);
